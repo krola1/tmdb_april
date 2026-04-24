@@ -1,17 +1,12 @@
-import { fetchMovieByID, fetchTrendingMovies, searchMovies } from "./api/tmdb";
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import { useTrendingMovies } from "./hooks/useTrendingMovies";
+import NavBar from "./components/NavBar";
 
 export default function App() {
-  const { data } = useTrendingMovies();
-  // console.log(data);
-  console.log(fetchMovieByID(394117));
-
   return (
     <>
-      {data?.results.map((movie) => (
-        <h3 key={movie.id}>{movie.title}</h3>
-      ))}
+      <NavBar />
+      <Outlet />
     </>
   );
 }
