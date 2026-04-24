@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <TrendingPage /> },
-      { path: "search", element: <SearchPage /> },
+      { path: "search1", element: <SearchPage /> },
       { path: "movies/:movieID", element: <DetailsPage /> },
     ],
   },

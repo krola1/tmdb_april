@@ -2,9 +2,11 @@ import { useState } from "react";
 import MovieList from "../components/MovieList";
 import { useSearchMovie } from "../hooks/useSearchMovie";
 import { useDebouncer } from "../hooks/useDebouncer";
+import { useLocation } from "react-router-dom";
 
 export default function SearchPage() {
-  const [text, setText] = useState("project");
+  const location = useLocation();
+  const [text, setText] = useState("");
   const debouncedText = useDebouncer(text);
   const query = debouncedText.trim().length >= 3 ? debouncedText : "";
   const { data, isLoading, error, isError } = useSearchMovie(query);
@@ -22,6 +24,7 @@ export default function SearchPage() {
         isLoading={isLoading}
         error={error}
         isError={isError}
+        location={location}
       />
     </div>
   );

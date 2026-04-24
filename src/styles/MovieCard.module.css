@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+  width: 342px;
+  border-radius: 12px;
+}
+.img {
+  width: 100%;
+  border-radius: 12px;
+}
+.overlay {
+  border-radius: 12px;
+  background: rgba(455, 455, 455, 0.2);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

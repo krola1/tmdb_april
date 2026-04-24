@@ -1,0 +1,10 @@
+.wrapper {
+  /* background-image: url(https://image.tmdb.org/t/p/w342/s3sJ6kI3PuaNF3eiaH29HdIWND6.jpg); */
+  background-size: cover;
+  background-position: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.poster {
+  height: 75vh;
+}
