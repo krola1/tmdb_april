@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard";
-
+//temp
 export default function MovieList({ data, isLoading, error, isError }) {
   if (isLoading) return <h1>Loading...</h1>;
   if (isError) return <h1>An error occured {error}</h1>;
